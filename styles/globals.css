@@ -1,0 +1,273 @@
+@import "~antd/dist/antd.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        background-image: linear-gradient(120deg, #fbfbfb 0%, #ebedee 100%);
+        font-family: "Lato";
+        @apply min-h-full min-w-full overflow-hidden font-normal text-gray-900;
+    }
+    body::after {
+        content: "";
+        background-image: url(data:image/png;base64,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);
+        opacity: 0.1;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: fixed;
+        z-index: -1;
+        transform: rotate(112deg);
+    }
+    h1 {
+        @apply text-2xl md:text-4xl font-black text-gray-700 font-smooth;
+    }
+    h2 {
+        @apply text-xl md:text-2xl font-bold text-gray-700 font-smooth;
+    }
+    h3 {
+        @apply text-lg md:text-xl font-smooth;
+    }
+    h4 {
+        @apply text-base md:text-lg text-gray-800 font-smooth;
+    }
+    h5 {
+        @apply text-base text-gray-800 font-smooth;
+    }
+    h6 {
+        @apply text-sm text-gray-800 font-smooth;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply mb-1;
+    }
+    p {
+        @apply text-base font-light;
+    }
+    /*  */
+    .font-smooth {
+        font-smooth: always;
+        @apply antialiased;
+    }
+}
+
+@layer utilities {
+    .transition-card {
+        @apply hover:shadow-xl hover:text-gray-900 hover:border hover:border-solid hover:border-gray-100 transition-all;
+    }
+
+    .transition-item {
+        @apply hover:shadow transition-shadow;
+    }
+
+    /* Card */
+    .card-base {
+        @apply rounded shadow transition-card;
+    }
+
+    .title {
+        @apply font-black text-gray-800 capitalize;
+    }
+}
+
+.container {
+    @apply relative max-w-full;
+}
+
+.row {
+    @apply w-full block relative  m-0 p-0 h-auto;
+}
+
+.sticky-row {
+    @apply top-0 sticky;
+}
+
+/* Add class to __next  */
+
+#__next {
+    @apply flex justify-center flex-wrap content-center h-full;
+}
+
+.content-wrapper {
+    @apply w-full md:w-1/2 absolute top-0 h-full md:h-[96%] md:my-4 md:px-4 px-0 m-0;
+}
+
+/* Floating Button */
+.floating-container {
+    @apply absolute w-16 bottom-8 right-1 md:left-1/10 md:top-0 z-[2];
+}
+
+.floating-button {
+    border-radius: 4rem;
+    @apply relative h-16 bg-white shadow-lg border border-solid border-gray-50 hover:shadow-sm mb-0 mt-4 md:mt-0 md:mb-4;
+}
+
+.floating-button a {
+    @apply w-full h-full block p-4;
+}
+
+.floating-button a.home {
+    @apply hover:origin-center hover:transform hover:-rotate-90 transition ease-in-out duration-300;
+}
+
+.floating-button a.me {
+    @apply transition-all duration-500 ease-in-out p-2 hover:p-0 text-lg;
+}
+
+.floating-button a.me:hover:before {
+    position: absolute;
+    z-index: 10;
+    content: "😄";
+}
+
+.floating-button a.me img {
+    @apply hover:scale-110 rounded-full z-0;
+}
+
+/* shake animation */
+.shake:hover {
+    animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(1px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(1px, 0, 0);
+    }
+}
+
+/* Card container */
+
+.card-container {
+    scrollbar-width: none;
+    @apply w-full md:w-8/12 m-auto overflow-x-auto h-full bg-white rounded relative shadow-inner;
+}
+
+/* scroll-bar design */
+.card-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.1);
+    background-color: #f5f5f5;
+}
+
+.card-container::-webkit-scrollbar {
+    width: 1px;
+    background-color: #fff;
+}
+
+.card-container::-webkit-scrollbar-thumb {
+    background-color: #eee;
+}
+
+/* Cards */
+.card {
+    @apply m-4 p-4 md:m-8 md:p-8 card-base;
+}
+
+.card-sm {
+    @apply m-2 p-2 md:m-4 md:p-4 card-base;
+}
+
+.card table {
+    @apply w-full;
+}
+
+.card table tr:nth-child(odd) {
+    @apply transition-item;
+}
+
+/* full length list */
+.list {
+    @apply grid grid-rows-1 items-center;
+}
+
+.list-item {
+    @apply grid grid-cols-5 grid-rows-1 px-4 pb-4 pt-0 transition-item place-content-start items-end;
+}
+
+/* card list */
+.grid-list {
+    @apply grid gap-4 md:gap-8 grid-cols-2 place-items-stretch;
+}
+
+.grid-item {
+    @apply border-2 border-solid border-gray-100 hover:border-gray-200 px-4 rounded-sm place-self-stretch transition-item;
+}
+
+.grid-item > div {
+    @apply h-auto my-4;
+}
+
+/*  */
+.sticky-title {
+    @apply title top-0 sticky z-[1] bg-white p-4;
+}
+
+/*  */
+/* 
+    references 
+        - https://css-tricks.com/emoji-toggles/ 
+        - https://codepen.io/madshensel/pen/wWpppW
+        - https://html-css-js.com/html/character-codes/
+*/
+.emoji {
+    font-size: 2.5rem;
+    padding: 0.25rem;
+}
+
+.emoji--happy:before {
+    content: "😄";
+}
+
+.emoji--happy:hover:before {
+    content: "😄";
+}
+
+/* .em-hug {
+    content: "🤗";
+}
+
+.em-smile {
+    content: "😀";
+} */
+
+.em-star-struck::before {
+    content: "🤩";
+}
+
+.em-star-struck:hover::before {
+    content: "🤗";
+}
+/* 
+.em-happy: {
+    content: "😄";
+}
+
+.em-rocket: {
+    content: "🚀";
+} */

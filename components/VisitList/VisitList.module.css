@@ -1,0 +1,43 @@
+.visitlist {
+    @apply grid grid-cols-8 auto-cols-max gap-2 content-center;
+}
+
+.orglogo,
+.qrcode {
+    @apply col-span-2;
+}
+
+.orglogo {
+    @apply p-2 md:p-1;
+    filter: grayscale(100%);
+}
+
+.visitmeta {
+    @apply col-span-4;
+}
+
+.qrcode {
+    @apply grid grid-rows-2 grid-cols-2 grid-flow-col;
+}
+
+.qrcode img {
+    @apply max-h-8;
+}
+
+.orgname {
+    @apply text-xs;
+}
+
+.visitdate {
+    @apply text-xs md:text-base;
+}
+
+.visitlist h1,
+.visitlist h2,
+.visitlist h3,
+.visitlist h4,
+.visitlist h5,
+.visitlist h6 {
+    @apply m-0;
+    text-rendering: optimizeLegibility;
+}
